@@ -1,4 +1,4 @@
-# Jobs used to create and destroy Azure resources
+# Jobs used to create and destroy Azure resources j
  # .github/example-workflows/spinup-destroy.yml
  name: Configure Azure environment
 
