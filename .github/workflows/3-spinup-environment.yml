@@ -64,11 +64,10 @@ jobs:
 
       # Create pull request from staging-test to set up next step
       - name: Create staging-test pull request 
-        run: .github/script/create-workflow-pr.sh --pull-first
+        run: ./.github/script/create-workflow.sh
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PR_BRANCH: staging-test
-          PR_TITLE: 'Step 4, apply stage label'
+          BRANCH: staging-test
+          WORKFLOW_PATH: .github/example-workflows/deploy-prod.yml
 
       # Update README to close <details id=3> and open <details id=4>
       # and set STEP to '4'
